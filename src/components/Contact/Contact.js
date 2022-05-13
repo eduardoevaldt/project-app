@@ -2,7 +2,7 @@ function Contact() {
     return (
         <div className="row">
             <div className="col-sm-1"></div>
-            <div className="col-sm-10">
+            <div className="col-sm-10 p-3">
                 <h1><b>Contato</b></h1>
                 <form action="">
                     <div class="mb-3 mt-3">

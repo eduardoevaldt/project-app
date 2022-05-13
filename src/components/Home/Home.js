@@ -2,7 +2,7 @@ function Home() {
     return (
         <div className="row">
             <div className="col-sm-1"></div>
-            <div className="col-sm-10">
+            <div className="col-sm-10 p-3">
                 <h1><b>Página Home</b></h1>
                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
                     nemo neque? Veritatis dignissimos similique, nisi rerum
