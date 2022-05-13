@@ -1,14 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import Home from "../Home/Home";
+import About from "../About";
+import Products from "../Products";
+import Contact from "../Contact/Contact";
+
 function Section() {
     return (
-        <section id="section" className="container p-3">
-            <div className="row">
-                <div className="col-sm-1"></div>
-                <div className="col-sm-10">
-                    <h1>Página xxxx</h1>
-                    <h5>xxxxx</h5>
-                </div>
-                <div className="col-sm-1"></div>
-            </div>
+        <section className="container p-3">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
         </section>
     )
 }
