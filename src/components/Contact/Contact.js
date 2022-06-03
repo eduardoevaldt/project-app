@@ -1,21 +1,60 @@
+import React from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import Api from "../../Api";
+
 function Contact() {
+    const {handleSubmit, register} = useForm();
+    const navigate = useNavigate();
+
+    const onSubmit = (data) =>{
+        Api.post('/contact',{
+            name: data.name,
+            email: data.email,
+            message: data.message
+        })
+        .then((response)=>{
+            console.log(response);
+        })
+        .catch((errors) => {
+            console.log(errors);
+        })
+        .finally(()=>{
+            navigate('/contactView');
+        })
+    }
+
     return (
         <div className="row">
             <div className="col-sm-1"></div>
-            <div className="col-sm-10 p-3">
-                <h1><b>Contato</b></h1>
-                <form action="">
-                    <div class="mb-3 mt-3">
-                        <label for="name" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="email" placeholder="Digite seu nome" name="name" />
+            <div className="col-sm-10">
+                <h1>Contato</h1>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="form-group mt-2">
+                        <label htmlFor="">Nome</label>
+                        <input 
+                            className="form-control"
+                            type="text"
+                            {...register('name')}
+                        />
                     </div>
-                    <div class="mb-3 mt-3">
-                        <label for="email" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" />
+                    <div className="form-group mt-2">
+                        <label htmlFor="">Email</label>
+                        <input 
+                            className="form-control"
+                            type="email"
+                            {...register('email')}
+                        />
                     </div>
-                    <label for="comment">O que deseja conosco?</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-                    <button type="submit" class="btn btn-dark mb-3 mt-3">Enviar</button>
+                    <div className="form-group mt-2">
+                        <label htmlFor="">Mensagem</label>
+                        <textarea 
+                            className="form-control"
+                            type="text"
+                            {...register('message')}
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="btn btn-dark mt-3">Enviar</button>
                 </form>
             </div>
             <div className="col-sm-1"></div>
