@@ -32,7 +32,10 @@ function Nav() {
                     isAdmin() ?
                         <>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/contactView">Lista de Contatos</Link>
+                                <Link className="nav-link" to="/admin/contactView">Lista de Contatos</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/admin/clientList">Lista de Clientes</Link>
                             </li>
                             <li className="nav-item">
                                 <a href="/" className="nav-link" onClick={logout}>Logout</a>

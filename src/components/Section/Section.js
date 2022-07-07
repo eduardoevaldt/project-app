@@ -7,6 +7,7 @@ import Contact from "../Contact/Contact";
 import Login from "../Admin/Login/Login";
 import ContactView from "../Admin/Contact/ContactView";
 import ContactResponse from "../Admin/Contact/ContactResponse";
+import ClientList from "../Admin/Client/ClientList"
 
 function Section() {
     return (
@@ -16,9 +17,12 @@ function Section() {
                 <Route path="/about" element={<About />} />
                 <Route path="/products/*" element={<Products />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/contactView" element={<ContactView />} />
+
                 <Route path="/user/login" element={<Login />} />
+
+                <Route path="/admin/contactView" element={<ContactView />} />
                 <Route path="/admin/contact/response/:idContact" element={<ContactResponse />} />
+                <Route path="/admin/clientList" element={<ClientList />} />
             </Routes>
         </section>
     )
