@@ -19,7 +19,7 @@ function Products() {
             <div className="col-sm-1"></div>
             <div className="col-sm-10 p-3">
                 <h1>Página de Produtos</h1>
-                <ul class="nav">
+                <ul className="nav">
                     {categories.map((category) =>
                         <li key={category.catId} className="nav-item">
                             <Link to={category.catId} className="nav-link active">

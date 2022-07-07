@@ -5,17 +5,17 @@ function About() {
 
     const [page, setPage] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         Api.get('/page/2')
-            .then((response)=>{
+            .then((response) => {
                 setPage(response.data);
             })
-    },[])
+    }, [])
 
     return (
         <div className="row">
             <div className="col-sm-1"></div>
-            <div 
+            <div
                 className="col-sm-10 p-3"
                 dangerouslySetInnerHTML={
                     {
@@ -23,7 +23,7 @@ function About() {
                     }
                 }
             >
-               
+
             </div>
             <div className="col-sm-1"></div>
         </div>

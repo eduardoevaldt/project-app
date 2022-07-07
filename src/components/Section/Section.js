@@ -3,7 +3,8 @@ import Home from "../Home/Home";
 import About from "../About";
 import Products from "../Products";
 import Contact from "../Contact/Contact";
-import ContactView from "../Contact/ContactView";
+import ContactView from "../Admin/ContactView";
+import Login from "../Admin/Login/Login";
 
 function Section() {
     return (
@@ -14,6 +15,7 @@ function Section() {
                 <Route path="/products/*" element={<Products />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/contactView" element={<ContactView />} />
+                <Route path="/user/login" element={<Login />} />
             </Routes>
         </section>
     )

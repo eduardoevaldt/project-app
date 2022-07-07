@@ -4,24 +4,24 @@ import { useNavigate } from "react-router-dom";
 import Api from "../../Api";
 
 function Contact() {
-    const {handleSubmit, register} = useForm();
+    const { handleSubmit, register } = useForm();
     const navigate = useNavigate();
 
-    const onSubmit = (data) =>{
-        Api.post('/contact',{
+    const onSubmit = (data) => {
+        Api.post('/contact', {
             name: data.name,
             email: data.email,
             message: data.message
         })
-        .then((response)=>{
-            console.log(response);
-        })
-        .catch((errors) => {
-            console.log(errors);
-        })
-        .finally(()=>{
-            navigate('/contactView');
-        })
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((errors) => {
+                console.log(errors);
+            })
+            .finally(() => {
+                navigate('/contactView');
+            })
     }
 
     return (
@@ -32,7 +32,7 @@ function Contact() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group mt-2">
                         <label htmlFor="">Nome</label>
-                        <input 
+                        <input
                             className="form-control"
                             type="text"
                             {...register('name')}
@@ -40,7 +40,7 @@ function Contact() {
                     </div>
                     <div className="form-group mt-2">
                         <label htmlFor="">Email</label>
-                        <input 
+                        <input
                             className="form-control"
                             type="email"
                             {...register('email')}
@@ -48,7 +48,7 @@ function Contact() {
                     </div>
                     <div className="form-group mt-2">
                         <label htmlFor="">Mensagem</label>
-                        <textarea 
+                        <textarea
                             className="form-control"
                             type="text"
                             {...register('message')}
