@@ -86,7 +86,7 @@ function AllCategories() {
   }
 
   function Category() {
-    const {id} = useParams();
+    let {id} = useParams();
     const [products, setProducts] = useState([]);
 
     useEffect(() => {

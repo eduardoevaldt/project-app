@@ -5,6 +5,7 @@ import Products from "../Products";
 import Contact from "../Contact/Contact";
 import ContactView from "../Admin/ContactView";
 import Login from "../Admin/Login/Login";
+import ContactResponse from "../Admin/ContactResponse/ContactResponse";
 
 function Section() {
     return (
@@ -16,6 +17,7 @@ function Section() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/contactView" element={<ContactView />} />
                 <Route path="/user/login" element={<Login />} />
+                <Route path="/admin/contact/response/:idContact" element={<ContactResponse />} />
             </Routes>
         </section>
     )

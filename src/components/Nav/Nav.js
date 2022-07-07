@@ -35,7 +35,7 @@ function Nav() {
                                 <Link className="nav-link" to="/contactView">Lista de Contatos</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" onClick={logout}>Logout</a>
+                                <a href="/" className="nav-link" onClick={logout}>Logout</a>
                             </li>
                         </>
                     :
