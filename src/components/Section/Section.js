@@ -3,9 +3,10 @@ import Home from "../Home/Home";
 import About from "../About";
 import Products from "../Products";
 import Contact from "../Contact/Contact";
-import ContactView from "../Admin/ContactView";
+
 import Login from "../Admin/Login/Login";
-import ContactResponse from "../Admin/ContactResponse/ContactResponse";
+import ContactView from "../Admin/Contact/ContactView";
+import ContactResponse from "../Admin/Contact/ContactResponse";
 
 function Section() {
     return (

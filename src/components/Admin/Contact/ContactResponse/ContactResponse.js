@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
-import Api from "../../../Api";
-import { getToken } from "../../../Auth";
+import Api from "../../../../Api";
+import { getToken } from "../../../../Auth";
 
 function ContactResponse() {
 

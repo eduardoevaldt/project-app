@@ -1,7 +1,7 @@
 import React from "react";
-import Api from "../../../Api";
+import Api from "../../../../Api";
 import { useState, useEffect } from "react";
-import { getToken } from "../../../Auth";
+import { getToken } from "../../../../Auth";
 import { useNavigate } from "react-router-dom";
 
 function ContactView() {
@@ -28,7 +28,7 @@ function ContactView() {
     } 
 
     const handleClickDelete = (idContact) =>{
-        Api.delele(`/contact/${idContact}`)
+        Api.delete(`/contact/${idContact}`)
         .finally(()=>{
             window.location.reload(false);
         })
