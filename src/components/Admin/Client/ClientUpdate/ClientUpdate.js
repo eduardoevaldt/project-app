@@ -21,7 +21,7 @@ function ClientUpdate() {
         )
             .then((response) => {
                 setClient(response.data);
-                reset(response.data)
+                reset(response.data);
             })
     }, [idClient, reset])
 
@@ -55,6 +55,7 @@ function ClientUpdate() {
                         <input
                             className="form-control"
                             type="text"
+                            {...register('name')}
                             defaultValue={client.name}
                         />
                     </div>

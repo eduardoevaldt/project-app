@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Api from "../../../../Api";
 import { getToken } from "../../../../Auth";
+import SearchBar from "../../../Commons";
 
 function ClientList() {
 
@@ -41,14 +42,15 @@ function ClientList() {
         <div className="row">
             <div className="col-sm-1"></div>
             <div className="col-sm-10">
+                <h1 className="mt-3">Lista de Clientes</h1>
+                <SearchBar path='/client/search' handle={(data) => {setClients(data)}} />
                 <button
-                    className="btn btn-primary"
+                    className="btn btn-success mt-3"
                     onClick={() => handleClickAdd()}
                 >
-                    Novo
+                    Novo Cliente
                 </button>
-                <h1 className="mt-2">Lista de Clientes</h1>
-                <table className="table table-striped">
+                <table className="table table-striped mt-2">
                     <thead>
                         <tr>
                             <th>Nome</th>

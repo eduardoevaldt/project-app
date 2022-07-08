@@ -7,9 +7,10 @@ import Contact from "../Contact/Contact";
 import Login from "../Admin/Login/Login";
 import ContactView from "../Admin/Contact/ContactView";
 import ContactResponse from "../Admin/Contact/ContactResponse";
-import ClientList from "../Admin/Client/ClientList"
+
 import ClientAdd from "../Admin/Client/ClientAdd/ClientAdd";
-import ClientUpdate from "../Admin/Contact/ClientUpdate";
+import ClientUpdate from "../Admin/Client/ClientUpdate/ClientUpdate";
+import ClientList from "../Admin/Client/ClientList/ClientList";
 
 function Section() {
     return (

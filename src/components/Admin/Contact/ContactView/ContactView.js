@@ -3,6 +3,7 @@ import Api from "../../../../Api";
 import { useState, useEffect } from "react";
 import { getToken } from "../../../../Auth";
 import { useNavigate } from "react-router-dom";
+import SearchBar from "../../../Commons";
 
 function ContactView() {
 
@@ -40,6 +41,7 @@ function ContactView() {
                 <div className="col-sm-1"></div>
                 <div className="col-sm-10">
                     <h1>Lista de Contatos</h1>
+                    <SearchBar path='/contact/search' handle={(data) => {setContacts(data)}} />
                     <table className="table table-striped">
                         <thead>
                             <tr>
@@ -59,7 +61,7 @@ function ContactView() {
                                     <td>{contact.status}</td>
                                     <td>
                                         <button 
-                                            className="btn btn-primary"
+                                            className="btn btn-secondary"
                                             onClick={()=>handleClickResponse(contact.idContact)}
                                         >
                                             Responder
