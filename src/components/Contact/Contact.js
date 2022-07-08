@@ -20,7 +20,7 @@ function Contact() {
                 console.log(errors);
             })
             .finally(() => {
-                navigate('/contactView');
+                navigate('/admin/contactView');
             })
     }
 

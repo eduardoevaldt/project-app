@@ -8,6 +8,8 @@ import Login from "../Admin/Login/Login";
 import ContactView from "../Admin/Contact/ContactView";
 import ContactResponse from "../Admin/Contact/ContactResponse";
 import ClientList from "../Admin/Client/ClientList"
+import ClientAdd from "../Admin/Client/ClientAdd/ClientAdd";
+import ClientUpdate from "../Admin/Contact/ClientUpdate";
 
 function Section() {
     return (
@@ -23,6 +25,8 @@ function Section() {
                 <Route path="/admin/contactView" element={<ContactView />} />
                 <Route path="/admin/contact/response/:idContact" element={<ContactResponse />} />
                 <Route path="/admin/clientList" element={<ClientList />} />
+                <Route path="/admin/clientAdd" element={<ClientAdd />} />
+                <Route path="/admin/clientUpdate/:idClient" element={<ClientUpdate />} />
             </Routes>
         </section>
     )

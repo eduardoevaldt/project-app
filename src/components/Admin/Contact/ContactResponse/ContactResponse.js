@@ -8,7 +8,7 @@ function ContactResponse() {
 
     let { idContact } = useParams();
     const [contact, setContact] = useState([]);
-    const { handleSubmit, register } = useForm();
+    const { handleSubmit, register, reset } = useForm();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -20,8 +20,9 @@ function ContactResponse() {
         })
             .then((response) => {
                 setContact(response.data)
+                reset(response.data)
             })
-    },[idContact])
+    },[idContact, reset])
 
     const handleOnChange = (event) =>{
        setContact({...contact, status:event.target.value})
@@ -40,7 +41,7 @@ function ContactResponse() {
             }
         )
         .finally(()=>{
-            navigate('/contactView')
+            navigate('/admin/contactView')
         })
     }
 
